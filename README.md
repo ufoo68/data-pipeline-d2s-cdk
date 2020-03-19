@@ -1,5 +1,7 @@
 # Simplest library for use data pipeline `Expprt DynamoDB to S3` on [AWS-CDK](https://aws.amazon.com/en/cdk/)
 
+[![npm version](https://badge.fury.io/js/data-pipeline-d2s-cdk.svg)](https://badge.fury.io/js/data-pipeline-d2s-cdk)
+
 ## Features
 
 This library prepare resouce on bellow.
