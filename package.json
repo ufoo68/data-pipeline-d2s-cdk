@@ -24,5 +24,18 @@
     "lib": "lib"
   },
   "author": "ufoo68 <mitarou.yuutarou@gmail.com> (https://qiita.com/ufoo68)",
-  "license": "ISC"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ufoo68/data-pipeline-d2s-cdk.git"
+  },
+  "keywords": [
+    "aws-cdk",
+    "iam",
+    "datapipeline"
+  ],
+  "bugs": {
+    "url": "https://github.com/ufoo68/data-pipeline-d2s-cdk/issues"
+  },
+  "homepage": "https://github.com/ufoo68/data-pipeline-d2s-cdk#readme"
 }

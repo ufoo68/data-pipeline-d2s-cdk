@@ -11,15 +11,18 @@ export enum TimeFormat {
   Week = 'Week',
   Month = 'Month',
 }
+
 export enum ScheduleType {
   cron = 'cron',
   timeseries = 'timeseries',
 }
+
 export enum FailureAndRerunMode {
   NONE = 'NONE',
   CASCADE = 'CASCADE',
 }
-export interface Props {
+
+interface Props {
   tableName: string
   bucketName: string
   throughputRatio?: number
@@ -33,8 +36,8 @@ export interface Props {
     format: TimeFormat
   }
   runOccurrences: number
-  scheduleType: ScheduleType
-  failureAndRerunMode: FailureAndRerunMode
+  scheduleType?: ScheduleType
+  failureAndRerunMode?: FailureAndRerunMode
 }
 
 export class DataPipelineD2SCdk extends cdk.Construct {
@@ -45,12 +48,12 @@ export class DataPipelineD2SCdk extends cdk.Construct {
       tableName,
       bucketName,
       throughputRatio,
-      resizeClusterBeforeRunning,
+      resizeClusterBeforeRunning = true,
       period,
       emrTerminateAfter,
-      runOccurrences,
-      scheduleType,
-      failureAndRerunMode,
+      runOccurrences = 1,
+      scheduleType = ScheduleType.cron,
+      failureAndRerunMode = FailureAndRerunMode.CASCADE,
     }: Props,
   ) {
     super(scope, id)
